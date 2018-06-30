@@ -15,18 +15,18 @@ SPIDER_MODULES = ['Dingxiang.spiders']
 NEWSPIDER_MODULE = 'Dingxiang.spiders'
 
 # 使用scrapy-redis里面的调度器
-SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+# SCHEDULER = "scrapy_redis.scheduler.Scheduler"
 
 #使用scrapy-redis里面的去重组件.
-DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+# DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
 
 # 允许暂停后,能保存进度
-SCHEDULER_PERSIST = True
+# SCHEDULER_PERSIST = True
 
 #使用scrapy_redis框架的队列
-SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderPriorityQueue"
+# SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderPriorityQueue"
 
-REDIS_URL = 'redis://root:2FbkvcTktaZW@219.239.89.43:6379/1'
+# REDIS_URL = 'redis://root:2FbkvcTktaZW@219.239.89.43:6379/1'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'Dingxiang (+http://www.yourdomain.com)'
