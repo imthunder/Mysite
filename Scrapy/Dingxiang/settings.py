@@ -81,10 +81,10 @@ ITEM_PIPELINES = {
    'Dingxiang.pipelines.DingxiangPipeline': 300,
    # 'scrapy_redis.pipelines.RedisPipeline': 301
 }
-MYSQL_HOSTS = '219.239.89.43'
+MYSQL_HOSTS = '127.0.0.1'
 MYSQL_PORT = 3306
-MYSQL_USER = 'python'
-MYSQL_PASSWORD = 'LRuNj4Qpa7d6gz'
+MYSQL_USER = 'root'
+MYSQL_PASSWORD = '123456'
 MYSQL_DB = 'python'
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
