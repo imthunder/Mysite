@@ -35,7 +35,7 @@ class DxList(models.Model):
     href = models.CharField(primary_key=True,unique=True, max_length=255,db_column='href_id')
     title = models.CharField(max_length=255)
     description = models.TextField()
-    imgurl = models.TextField(db_column='img_url')  # Field name made lowercase.
+    imgurl = models.TextField(db_column='imgUrl')  # Field name made lowercase.
     author = models.CharField(max_length=255)
 
     class Meta:
