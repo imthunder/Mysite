@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="test1" class="col">
+    <div class="row">
+        {% for cell in list %}
+            <div class="col s12 m6 l4">
+                <div class="card medium">
+                    <a href= {{cell.id}}>
+                        <div class="card-image">
+                            <img class="responsive-image" style="height:280px" src={{cell.cover}}>
+                        </div>
+                        <div class="card-content">
+                                <p class="green-text text-lighten-3 center-align">
+                                    {{cell.name}}
+                                </p>
+                            <div class="section">
+                                <p class=" grey-text text-grey center-align ">{{cell.description}}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="pagination">
+
+        <ul class="pagination center">
+            {% if page_obj.has_previous %}
+                <li><a href="/special?page={{ page_obj.previous_page_number }}"><i class="material-icons">chevron_left</i></a></li>
+            {% endif %}
+
+            {% with ''|center:page_obj.paginator.num_pages as range %}
+            {% for _ in range %}
+                {% if forloop.counter == page_obj.number %}
+                    <li class="active green lighten-2"><a href="/special?page={{ forloop.counter }}">{{ forloop.counter }}</a></li>
+                {% else %}
+                    <li ><a href="/special?page={{ forloop.counter }}">{{ forloop.counter }}</a></li>
+                {% endif %}
+            {% endfor %}
+            {% endwith %}
+
+            {% if page_obj.has_next %}
+                <li class="waves-effect"><a href="/special?page={{ page_obj.next_page_number }}"><i class="material-icons">chevron_right</i></a></li>
+            {% endif %}
+        </ul>
+
+    </div>
+</div>
+{% endblock %}

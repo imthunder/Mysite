@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>丁香医生</title>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"  media="screen,projection"/>
+        <link href='{% static "css/base.css" %}' rel='stylesheet'>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+        <div class='container'>
+            <nav class="nav-extended  green lighten-2">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo center">丁香医生</a>
+                </div>
+                <div class="nav-content">
+                    <ul class="tabs tabs-transparent">
+                        <li class="tab"><a class="active" href="/special">精选专题</a></li>
+                    </ul>
+                </div>
+            </nav>
+            {% block content %}
+            {% endblock %}
+        </div>
+        <footer class="page-footer blue-grey lighten-5">
+            <div class="container center container">
+                <p class="grey-text">数据来源：
+                    <a href="https://dxy.com">https://dxy.com</a>
+                </p>
+            </div>
+
+            <div class="footer-copyright blue-grey lighten-5">
+                <div class="container center">
+                    <p class="grey-text">© 2018 Copyright Thunder<p>
+                </div>
+            </div>
+        </footer>
+        <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    </body>
+</html>
