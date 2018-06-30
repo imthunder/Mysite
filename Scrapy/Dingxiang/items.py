@@ -34,7 +34,7 @@ class DingxiangListItem(scrapy.Item):
 
     def get_insert_sql(self):
         insert_sql='''
-        REPLACE INTO `xdl_dx_special_list` (`pid`, `href_id`, `title`,`description`, `img_url`, `author`)
+        REPLACE INTO `xdl_dx_special_list` (`pid`, `href_id`, `title`,`description`, `imgUrl`, `author`)
         VALUES (%s, %s, %s, %s, %s, %s)
         '''
         params=(
